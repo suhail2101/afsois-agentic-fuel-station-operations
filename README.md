@@ -16,6 +16,7 @@ AFSOIS is a proposed operations-intelligence platform for retail fuel-station wo
 - Synthetic fixtures and versioned demo policy
 - Small Python reference functions and unit tests
 - GitHub Actions workflow, publication checklist, LinkedIn and resume copy
+- Editable Word and PDF system-design reports in `deliverables/`
 
 ## Implementation status
 | Component | Status |
@@ -34,31 +35,34 @@ Do not describe design-only components as implemented.
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -e ".[dev]"
+python -m pip install -e ".[dev]"
 pytest -q
 ```
 
 ## Architecture at a glance
 ```mermaid
 flowchart TB
-  U[Owner / Manager / Attendant] --> UI[Dashboard / Assistant UI]
+  U[Owner / Manager / Attendant] --> UI[Role-based UI]
   UI --> API[API + Identity + RBAC]
   API --> WF[Workflow Orchestrator]
   WF --> AG[Bounded Specialist Agents]
   AG --> DS[Deterministic Domain Services]
   DS --> DB[(Operational Database)]
-  WF --> H[Human Approval Queue]
-  H --> AUD[(Append-only Audit Events)]
-  AG --> OBS[Evaluation and Observability]
+  WF <--> AP[Human Approval Queue]
+  WF --> AU[(Append-only Audit Events)]
+  AG --> EV[Evaluation / Tracing]
 ```
 
 ## Documentation
-- `docs/architecture/` — system and agent architecture
-- `docs/agents/` — agent catalogue and specification template
-- `docs/workflows/` — operational workflows
-- `docs/product/` — requirements, roadmap, data model, API and decision register
-- `docs/governance/` — security, privacy, safety and evaluation
-- `docs/portfolio/` — career copy and publication checklist
+- [System architecture](docs/architecture/system-design.md)
+- [Agent architecture](docs/architecture/agent-architecture.md)
+- [Agent catalogue](docs/agents/agent-catalogue.md)
+- [Operational workflows](docs/workflows/)
+- [Data model and API contracts](docs/product/)
+- [Security, safety, privacy and evaluation](docs/governance/)
+- [LinkedIn and resume material](docs/portfolio/linkedin-and-resume.md)
+- [System design PDF](deliverables/AFSOIS_System_Design_v2.pdf)
+- [System design Word document](deliverables/AFSOIS_System_Design_v2.docx)
 
 ## Safety and scope
 No AI control of dispensers, PLCs, tank probes, CCTV, fire systems or emergency shutdown equipment. No autonomous bank transfers, vendor payments, refunds, credit issuance or ledger corrections. Agent permissions are enforced server-side, not by prompts. All public examples are fabricated.
