@@ -1,0 +1,15 @@
+[build-system]
+requires=["setuptools>=68","wheel"]
+build-backend="setuptools.build_meta"
+[project]
+name="afsois"
+version="0.2.0"
+requires-python=">=3.10"
+dependencies=[]
+[project.optional-dependencies]
+dev=["pytest>=8.0","hypothesis>=6.0"]
+[tool.setuptools.packages.find]
+where=["src"]
+[tool.pytest.ini_options]
+testpaths=["tests"]
+pythonpath=["src"]

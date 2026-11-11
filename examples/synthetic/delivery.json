@@ -1,0 +1,23 @@
+{
+  "event_id": "evt_demo_00042",
+  "event_type": "delivery.verification.requested",
+  "station_id": "station_demo_01",
+  "delivery_id": "delivery_demo_07",
+  "claimed_litres": "5000.000",
+  "pre_dip": {
+    "dip_cm": "82.0",
+    "chart_version": "synthetic-chart-v2",
+    "measured_litres": "6120.0"
+  },
+  "post_dip": {
+    "dip_cm": "91.5",
+    "chart_version": "synthetic-chart-v2",
+    "measured_litres": "11035.0"
+  },
+  "evidence": [
+    "evidence_demo_pre_01",
+    "evidence_demo_post_01",
+    "evidence_demo_pod_01"
+  ],
+  "synthetic": true
+}

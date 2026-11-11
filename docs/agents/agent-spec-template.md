@@ -1,0 +1,12 @@
+# Agent Specification Template
+- Name/version/owner/risk tier
+- Purpose and non-purpose
+- Trigger and required/optional inputs
+- Data scope/classification
+- Tools with read/write permissions and preconditions
+- Output schema and evidence references
+- Authority level and prohibited actions
+- Human approval conditions
+- Missing-data/conflict/tool/policy failure handling
+- Escalation path
+- Golden tests, groundedness, tool correctness, permission compliance and abstention metrics

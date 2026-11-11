@@ -1,0 +1,22 @@
+policy_version: demo-2026-01
+mode: advisory
+currency: INR
+measurement:
+  volume_unit: litre
+  decimal_precision: 3
+  require_chart_version: true
+  prohibit_dip_chart_extrapolation: true
+  loss_tolerance: NOT_CONFIGURED
+delivery:
+  require_pre_and_post_measurement: true
+  require_proof_of_delivery: true
+  variance_action: HUMAN_REVIEW
+finance:
+  autonomous_payment: false
+  autonomous_refund: false
+  autonomous_credit_issue: false
+  ledger_correction: REVERSAL_AND_REVIEW
+safety:
+  hardware_control_by_ai: false
+  emergency_shutdown_control_by_ai: false
+  notify_and_record_only: true

@@ -1,0 +1,22 @@
+{
+  "event_id": "evt_demo_00041",
+  "event_type": "shift.close.submitted",
+  "station_id": "station_demo_01",
+  "business_date": "2026-10-15",
+  "shift_id": "shift_demo_02",
+  "machine_id": "machine_demo_01",
+  "operator_id": "operator_demo_03",
+  "meter": {
+    "opening_litres": "18240.000",
+    "closing_litres": "18465.500",
+    "unit_price": "101.25"
+  },
+  "payments": {
+    "cash": "12000.00",
+    "upi": "9800.00",
+    "card": "5000.00",
+    "credit": "603.125"
+  },
+  "currency": "INR",
+  "synthetic": true
+}
